@@ -9,6 +9,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.*;
 
 import shoppingsite.pageobjects.LandingPage;
 
@@ -16,17 +17,18 @@ import shoppingsite.pageobjects.LandingPage;
 public class BaseTest {
 	
 	public WebDriver dr1;
+	public LandingPage lp;
 	
 	public WebDriver initializeDriver() throws IOException {
-		//Propertoes class
+		//Properties class
 		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//src//resources//GlobalData.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//src/main//java//shoppingsite//resources//GlobalData.properties");
 		prop.load(fis);
 		String browser = prop.getProperty("browser");
 		
 		if (browser.equalsIgnoreCase("firefox")){
 			System.setProperty("webdriver.gecko.driver", "/Users/saramise/Downloads/geckodriver");
-			WebDriver dr1 = new FirefoxDriver();
+			dr1 = new FirefoxDriver();
 			
 		}
 
@@ -37,11 +39,18 @@ public class BaseTest {
 		
 	}
 	
-	public void launchApp() throws IOException {
+	@BeforeMethod
+	public LandingPage launchApp() throws IOException {
 		WebDriver driver = initializeDriver();
-		LandingPage lp = new LandingPage(driver);
+		lp = new LandingPage(driver);
 		lp.goTo();
+		return lp;
 		
+	}
+	
+	@AfterMethod
+	public void closeDriver() {
+		dr1.close();
 	}
 
 }

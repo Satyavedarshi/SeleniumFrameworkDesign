@@ -17,6 +17,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import shoppingsite.pageobjects.LandingPage;
+import shoppingsite.pageobjects.OrdersPage;
 import shoppingsite.pageobjects.ProductCatalogue;
 import shoppingsite.pageobjects.cartPage;
 import shoppingsite.pageobjects.checkOut;
@@ -50,6 +51,20 @@ public class SubmitOrderTest extends BaseTest{
 
 			System.out.println("Expected message is " + confirmsg);
 			AssertJUnit.assertTrue(confirmsg.equalsIgnoreCase("Thankyou for the order."));
+			
+		}
+		
+		@Test(dependsOnMethods= {"SubmitOrder"})
+		public void OrderHistoryTest() throws IOException {
+			
+			// TODO Auto-generated method stub
+
+			String prodvalidate = "ZARA COAT 3";
+			// testpractice1@gmail.com, Nuzvid@123
+			ProductCatalogue p1 = lp.loginApplication("testpractice1@gmail.com", "Nuzvid@123");
+
+			OrdersPage op = p1.gotoorderspage();
+			Assert.assertTrue(op.VerifyOrderDisplay(prodvalidate));
 			
 		}
 		

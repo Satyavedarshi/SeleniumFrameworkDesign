@@ -39,7 +39,7 @@ public class BaseTest {
 		
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public LandingPage launchApp() throws IOException {
 		WebDriver driver = initializeDriver();
 		lp = new LandingPage(driver);
@@ -48,7 +48,7 @@ public class BaseTest {
 		
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void closeDriver() {
 		dr1.close();
 	}

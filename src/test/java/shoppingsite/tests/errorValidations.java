@@ -15,7 +15,7 @@ import shoppingsite.testcomponents.BaseTest;
 
 public class errorValidations extends BaseTest{
 	
-	@Test
+	@Test(groups= {"ErrorHandling"})
 	public void loginErrorCheck() throws IOException {
 		
 		// TODO Auto-generated method stub

@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="shoppingsite.tests.errorValidations">
+      <class name="shoppingsite.tests.SubmitOrderTest">
         <methods>
           <include name="closeDriver"/>
-          <include name="ProductNameErrorCheck"/>
+          <include name="SubmitOrder"/>
+          <include name="OrderHistoryTest"/>
           <include name="launchApp"/>
         </methods>
-      </class> <!-- shoppingsite.tests.errorValidations -->
+      </class> <!-- shoppingsite.tests.SubmitOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,15 +1,23 @@
 package shoppingsite.testcomponents;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import shoppingsite.pageobjects.LandingPage;
 
@@ -38,6 +46,17 @@ public class BaseTest {
 		return dr1;
 		
 	}
+	
+	public List<HashMap<String,String>> getJsonDataToMap(String Fileloc) throws IOException {
+		//read json to String
+		String jsoncontent = FileUtils.readFileToString(new File(Fileloc),StandardCharsets.UTF_8);
+
+		//String HashMap
+		ObjectMapper mapper = new ObjectMapper(); 
+		List<HashMap<String,String>> data = mapper.readValue(jsoncontent, new TypeReference<List<HashMap<String,String>>>(){});
+		return data;
+	}
+
 	
 	@BeforeMethod(alwaysRun=true)
 	public LandingPage launchApp() throws IOException {

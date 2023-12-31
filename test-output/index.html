@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -55,12 +55,12 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                    <span class="method-stats">7 methods, 3 failed,  3 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,15 +103,53 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="OrderHistoryTest({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com})">OrderHistoryTest({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.errorValidations" class="method navigator-link" hash-for-method="ProductNameErrorCheck">ProductNameErrorCheck</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="OrderHistoryTest({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})">OrderHistoryTest({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="SubmitOrder({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})">SubmitOrder({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.errorValidations" class="method navigator-link" hash-for-method="loginErrorCheck">loginErrorCheck</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="OrderHistoryTest">OrderHistoryTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.errorValidations" class="method navigator-link" hash-for-method="loginErrorCheck">loginErrorCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.errorValidations" class="method navigator-link" hash-for-method="loginErrorCheck">loginErrorCheck</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -120,11 +158,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="SubmitOrder({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})">SubmitOrder({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="shoppingsite.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="SubmitOrder({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com})">SubmitOrder({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com})</a> <!-- method navigator-link -->
@@ -145,48 +178,46 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">shoppingsite.tests.SubmitOrderTest</span>
+              <span class="class-name">shoppingsite.tests.errorValidations</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="OrderHistoryTest({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com})">
-                  </a> <!-- OrderHistoryTest({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com}) -->
-                  <span class="method-name">OrderHistoryTest</span>
-                  <span class="parameters">({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com})</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at shoppingsite.tests.SubmitOrderTest.OrderHistoryTest(SubmitOrderTest.java:75)
+                  <a name="ProductNameErrorCheck">
+                  </a> <!-- ProductNameErrorCheck -->
+                  <span class="method-name">ProductNameErrorCheck</span>
+                  <div class="stack-trace">java.lang.AssertionError: 
+	at shoppingsite.tests.errorValidations.ProductNameErrorCheck(errorValidations.java:55)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 21 stack frames
+... Removed 20 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="OrderHistoryTest({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})">
-                  </a> <!-- OrderHistoryTest({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com}) -->
-                  <span class="method-name">OrderHistoryTest</span>
-                  <span class="parameters">({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at shoppingsite.tests.SubmitOrderTest.OrderHistoryTest(SubmitOrderTest.java:75)
+                  <a name="loginErrorCheck">
+                  </a> <!-- loginErrorCheck -->
+                  <span class="method-name">loginErrorCheck</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected:&lt;Incorrect email or password.&gt; but was:&lt;&gt;
+	at shoppingsite.tests.errorValidations.loginErrorCheck(errorValidations.java:37)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 21 stack frames
+... Removed 19 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">shoppingsite.tests.SubmitOrderTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -196,8 +227,108 @@
                   </a> <!-- SubmitOrder({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com}) -->
                   <span class="method-name">SubmitOrder</span>
                   <span class="parameters">({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;button class=&quot;btn btn-custom&quot;&gt; is not clickable at point (1270,26) because another element &lt;div class=&quot;ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating&quot;&gt; obscures it
+Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.1.2&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [5359cf4c-da7b-4a71-9abd-63d788d4a8e0, clickElement {id=653707b8-607d-42b7-bdb5-e374687c0bf4}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.6.0, moz:accessibilityChecks: false, moz:buildID: 20231211164624, moz:debuggerAddress: 127.0.0.1:26985, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 23.1.0, moz:processID: 95629, moz:profile: /var/folders/6v/9lrvtpk51g3..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:26985/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on mac (5359cf4c-da7b-4a71-9abd-63d788d4a8e0)] -&gt; css selector: [routerlink=&quot;/dashboard/cart&quot;]]
+Session ID: 5359cf4c-da7b-4a71-9abd-63d788d4a8e0
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at shoppingsite.AbstractComponents.AbstractComponents.gotocartpage(AbstractComponents.java:49)
+	at shoppingsite.tests.SubmitOrderTest.SubmitOrder(SubmitOrderTest.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">shoppingsite.tests.errorValidations</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginErrorCheck">
+                  </a> <!-- loginErrorCheck -->
+                  <span class="method-name">loginErrorCheck</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected:&lt;Incorrect email or password.&gt; but was:&lt;&gt;
+	at shoppingsite.tests.errorValidations.loginErrorCheck(errorValidations.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginErrorCheck">
+                  </a> <!-- loginErrorCheck -->
+                  <span class="method-name">loginErrorCheck</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected:&lt;Incorrect email or password.&gt; but was:&lt;&gt;
+	at shoppingsite.tests.errorValidations.loginErrorCheck(errorValidations.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 19 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">shoppingsite.tests.SubmitOrderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="OrderHistoryTest">
+                  </a> <!-- OrderHistoryTest -->
+                  <span class="method-name">OrderHistoryTest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method shoppingsite.tests.SubmitOrderTest.OrderHistoryTest() on instance shoppingsite.tests.SubmitOrderTest@54422e18 depends on not successfully finished methods 
+[shoppingsite.tests.SubmitOrderTest.SubmitOrder() on instance shoppingsite.tests.SubmitOrderTest@54422e18]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 8 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">shoppingsite.tests.SubmitOrderTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
                   <a name="SubmitOrder({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com})">
@@ -226,6 +357,11 @@
       &lt;class name=&quot;shoppingsite.tests.SubmitOrderTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SubmitOrderTest --&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;errorValidations&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;shoppingsite.tests.errorValidations&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- errorValidations --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -239,6 +375,9 @@
               <li>
                 <span class="test-name">SubmitOrderTest (1 class)</span>
               </li>
+              <li>
+                <span class="test-name">errorValidations (1 class)</span>
+              </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -247,6 +386,14 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">ErrorHandling</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginErrorCheck</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
             <div class="test-group">
               <span class="test-group-name">purchaseorder</span>
               <br/>
@@ -271,28 +418,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'SubmitOrder')
-data.setCell(0, 2, 'shoppingsite.tests.SubmitOrderTest')
-data.setCell(0, 3, 9254);
+data.setCell(0, 1, 'ProductNameErrorCheck')
+data.setCell(0, 2, 'shoppingsite.tests.errorValidations')
+data.setCell(0, 3, 16032);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'SubmitOrder')
 data.setCell(1, 2, 'shoppingsite.tests.SubmitOrderTest')
-data.setCell(1, 3, 9231);
+data.setCell(1, 3, 9410);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'OrderHistoryTest')
-data.setCell(2, 2, 'shoppingsite.tests.SubmitOrderTest')
-data.setCell(2, 3, 504);
+data.setCell(2, 1, 'loginErrorCheck')
+data.setCell(2, 2, 'shoppingsite.tests.errorValidations')
+data.setCell(2, 3, 1379);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'OrderHistoryTest')
-data.setCell(3, 2, 'shoppingsite.tests.SubmitOrderTest')
-data.setCell(3, 3, 504);
+data.setCell(3, 1, 'loginErrorCheck')
+data.setCell(3, 2, 'shoppingsite.tests.errorValidations')
+data.setCell(3, 3, 1362);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'loginErrorCheck')
+data.setCell(4, 2, 'shoppingsite.tests.errorValidations')
+data.setCell(4, 3, 1358);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'SubmitOrder')
+data.setCell(5, 2, 'shoppingsite.tests.SubmitOrderTest')
+data.setCell(5, 3, 1099);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'OrderHistoryTest')
+data.setCell(6, 2, 'shoppingsite.tests.SubmitOrderTest')
+data.setCell(6, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 34 seconds</span>
+              <span class="suite-total-time">Total running time: 41 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -318,58 +477,102 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">shoppingsite.tests.SubmitOrderTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">shoppingsite.tests.errorValidations</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">shoppingsite.tests.SubmitOrderTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">88 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">shoppingsite.tests.errorValidations</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">ProductNameErrorCheck</span>
+                <span class="method-start">4693 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">shoppingsite.tests.SubmitOrderTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">SubmitOrder({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com})</span>
-                <span class="method-start">3590 ms</span>
+                <span class="method-start">4737 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">12848 ms</span>
+                <span class="method-start">14149 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApp</span>
-                <span class="method-start">13255 ms</span>
+                <span class="method-start">14550 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">SubmitOrder({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})</span>
-                <span class="method-start">16539 ms</span>
+                <span class="method-start">19949 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">shoppingsite.tests.errorValidations</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">25771 ms</span>
+                <span class="method-start">20808 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApp</span>
-                <span class="method-start">26175 ms</span>
+                <span class="method-start">21198 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">shoppingsite.tests.SubmitOrderTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">closeDriver</span>
+                <span class="method-start">21201 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">shoppingsite.tests.errorValidations</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">loginErrorCheck</span>
+                <span class="method-start">25321 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeDriver</span>
+                <span class="method-start">26684 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">27066 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginErrorCheck</span>
+                <span class="method-start">32676 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeDriver</span>
+                <span class="method-start">34034 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">34403 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">OrderHistoryTest({productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com})</span>
-                <span class="method-start">29505 ms</span>
+                <span class="method-name">loginErrorCheck</span>
+                <span class="method-start">39914 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">30119 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApp</span>
-                <span class="method-start">30529 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">OrderHistoryTest({productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com})</span>
-                <span class="method-start">33688 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeDriver</span>
-                <span class="method-start">34284 ms</span>
+                <span class="method-start">41545 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

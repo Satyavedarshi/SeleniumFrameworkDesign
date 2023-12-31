@@ -18,6 +18,7 @@ public class TestNGListeners extends BaseTest implements ITestListener{
 	ExtentTest test;
 	ExtentReports extent1 = ExtentReportsNG.getReportsObject();
 	WebDriver resultdriver;
+	ThreadLocal<ExtentTest> extentthread = new ThreadLocal<ExtentTest>();
 
 	@Override
 	public void onFinish(ITestContext context) {
@@ -49,7 +50,7 @@ public class TestNGListeners extends BaseTest implements ITestListener{
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestFailure(result);
 		String screenpath = null;
-		test.fail(result.getThrowable());
+		extentthread.get().fail(result.getThrowable());
 		try {
 			resultdriver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 			screenpath = getScreenshot(result.getMethod().getMethodName(), resultdriver);
@@ -74,13 +75,14 @@ public class TestNGListeners extends BaseTest implements ITestListener{
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestStart(result);
 		test = extent1.createTest(result.getMethod().getMethodName());
+		extentthread.set(test);
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestSuccess(result);
-		test.log(Status.PASS, "Test is passed");
+		extentthread.get().log(Status.PASS, "Test is passed");
 	}
 
 	@Override

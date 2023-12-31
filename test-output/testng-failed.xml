@@ -9,11 +9,23 @@
       <class name="shoppingsite.tests.SubmitOrderTest">
         <methods>
           <include name="closeDriver"/>
-          <include name="SubmitOrder"/>
-          <include name="OrderHistoryTest" invocation-numbers="0 1"/>
+          <include name="SubmitOrder" invocation-numbers="1"/>
+          <include name="OrderHistoryTest"/>
           <include name="launchApp"/>
         </methods>
       </class> <!-- shoppingsite.tests.SubmitOrderTest -->
     </classes>
   </test> <!-- SubmitOrderTest(failed) -->
+  <test thread-count="5" parallel="tests" name="errorValidations(failed)">
+    <classes>
+      <class name="shoppingsite.tests.errorValidations">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="loginErrorCheck"/>
+          <include name="ProductNameErrorCheck"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- shoppingsite.tests.errorValidations -->
+    </classes>
+  </test> <!-- errorValidations(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.sun.net.httpserver.Authenticator.Retry;
 
 import org.testng.AssertJUnit;
 
@@ -18,10 +19,11 @@ import shoppingsite.pageobjects.cartPage;
 import shoppingsite.pageobjects.checkOut;
 import shoppingsite.pageobjects.confirmPage;
 import shoppingsite.testcomponents.BaseTest;
+import shoppingsite.testcomponents.RetryTest;
 
 public class errorValidations extends BaseTest{
 	
-	@Test(groups= {"ErrorHandling"})
+	@Test(groups= {"ErrorHandling"}, retryAnalyzer=RetryTest.class)
 	public void loginErrorCheck() throws IOException {
 		
 		// TODO Auto-generated method stub

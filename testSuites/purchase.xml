@@ -15,7 +15,11 @@
 			<class name="shoppingsite.tests.SubmitOrderTest" />
 		</classes>
 	</test> <!--
-	Test --> <!--
-	Test -->
+	Test --> 
+	<test thread-count="5" name="errorValidations">
+    <classes>
+      <class name="shoppingsite.tests.errorValidations"/>
+    </classes>
+  </test> 
 </suite> <!--
 Suite -->

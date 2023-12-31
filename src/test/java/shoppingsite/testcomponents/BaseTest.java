@@ -11,9 +11,12 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -21,6 +24,7 @@ import org.testng.annotations.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import shoppingsite.pageobjects.LandingPage;
 
 
@@ -34,12 +38,24 @@ public class BaseTest {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//src/main//java//shoppingsite//resources//GlobalData.properties");
 		prop.load(fis);
-		String browser = prop.getProperty("browser");
+		String browser = System.getProperty("browser")!=null ? System.getProperty("browser") : prop.getProperty("browser");
+		
 		
 		if (browser.equalsIgnoreCase("firefox")){
 			System.setProperty("webdriver.gecko.driver", "/Users/saramise/Downloads/geckodriver");
 			driver = new FirefoxDriver();
 			
+		}
+		else if(browser.contains("chrome")){
+			ChromeOptions co = new ChromeOptions();
+			WebDriverManager.chromedriver().setup();
+			//System.setProperty("webdriver.chrome.driver", "/Users/saramise/Downloads/chromedriver-mac-arm64/chromedriver");
+			if(browser.contains("headless")) {
+				co.addArguments("headless");
+			}
+			driver = new ChromeDriver(co);
+			driver.manage().window().setSize(new Dimension(1440,900));
+		
 		}
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));

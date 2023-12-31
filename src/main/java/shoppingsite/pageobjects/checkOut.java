@@ -12,12 +12,12 @@ import shoppingsite.AbstractComponents.AbstractComponents;
 
 public class checkOut extends AbstractComponents {
 
-	WebDriver driv3;
+	WebDriver driver;
 
 	public checkOut(WebDriver dr1) {
 		super(dr1);
-		this.driv3 = dr1;
-		PageFactory.initElements(driv3, dr1);
+		this.driver = dr1;
+		PageFactory.initElements(driver, dr1);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -31,7 +31,7 @@ public class checkOut extends AbstractComponents {
 	WebElement confbutton;
 
 	public void selectcountry(String Country1) {
-		Actions a1 = new Actions(driv3);
+		Actions a1 = new Actions(driver);
 		a1.sendKeys(country, Country1).build().perform();
 		waitforelemnttoappear(By.cssSelector(".ta-results"));
 		selectcountryelm.click();
@@ -39,7 +39,7 @@ public class checkOut extends AbstractComponents {
 
 	public confirmPage submitconfirm() {
 		confbutton.click();
-		confirmPage cp1 = new confirmPage(driv3);
+		confirmPage cp1 = new confirmPage(driver);
 		return cp1;
 	}
 }

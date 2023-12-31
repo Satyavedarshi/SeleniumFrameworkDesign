@@ -12,12 +12,12 @@ import shoppingsite.AbstractComponents.AbstractComponents;
 
 public class cartPage extends AbstractComponents {
 
-	WebDriver driv;
+	WebDriver driver;
 
 	public cartPage(WebDriver dr1) {
 		super(dr1);
-		this.driv = dr1;
-		PageFactory.initElements(driv, dr1);
+		this.driver = dr1;
+		PageFactory.initElements(driver, dr1);
 	}
 
 	@FindBy(css = ".cartSection h3")
@@ -37,7 +37,7 @@ public class cartPage extends AbstractComponents {
 
 	public checkOut gotocheckout() {
 		checkoutbutton.click();
-		checkOut check1 = new checkOut(driv);
+		checkOut check1 = new checkOut(driver);
 		return check1;
 	}
 

@@ -7,12 +7,12 @@ import org.testng.Assert;
 
 public class confirmPage {
 
-	WebDriver driv4;
+	WebDriver driver;
 
 	public confirmPage(WebDriver driv3) {
 		// TODO Auto-generated constructor stub
-		this.driv4 = driv3;
-		PageFactory.initElements(driv4, this);
+		this.driver = driv3;
+		PageFactory.initElements(driver, this);
 	}
 
 	@FindBy(css = "[class=\"hero-primary\"]")

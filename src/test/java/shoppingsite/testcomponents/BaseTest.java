@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -24,7 +26,7 @@ import shoppingsite.pageobjects.LandingPage;
 
 public class BaseTest {
 	
-	public WebDriver dr1;
+	public WebDriver driver;
 	public LandingPage lp;
 	
 	public WebDriver initializeDriver() throws IOException {
@@ -36,14 +38,14 @@ public class BaseTest {
 		
 		if (browser.equalsIgnoreCase("firefox")){
 			System.setProperty("webdriver.gecko.driver", "/Users/saramise/Downloads/geckodriver");
-			dr1 = new FirefoxDriver();
+			driver = new FirefoxDriver();
 			
 		}
 
-		dr1.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		WebDriverWait w1 = new WebDriverWait(dr1, Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
-		return dr1;
+		return driver;
 		
 	}
 	
@@ -55,6 +57,16 @@ public class BaseTest {
 		ObjectMapper mapper = new ObjectMapper(); 
 		List<HashMap<String,String>> data = mapper.readValue(jsoncontent, new TypeReference<List<HashMap<String,String>>>(){});
 		return data;
+	}
+	
+
+	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException{
+		TakesScreenshot ts = (TakesScreenshot) driver;	
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		
+		File dest = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
+		FileUtils.copyFile(source, dest);
+		return dest.getAbsolutePath();
 	}
 
 	
@@ -69,7 +81,9 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun=true)
 	public void closeDriver() {
-		dr1.close();
+		driver.close();
 	}
+	
+	
 
 }

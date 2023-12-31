@@ -2,6 +2,9 @@
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import org.testng.AssertJUnit;
 
 import java.io.File;
@@ -38,8 +41,6 @@ public class SubmitOrderTest extends BaseTest{
 			
 			// TODO Auto-generated method stub
 
-			//String prodvalidate = "ZARA COAT 3";
-
 
 			// testpractice1@gmail.com, Nuzvid@123
 			//ProductCatalogue p1 = lp.loginApplication("testpractice1@gmail.com", "Nuzvid@123");
@@ -71,17 +72,11 @@ public class SubmitOrderTest extends BaseTest{
 			ProductCatalogue p1 = lp.loginApplication(map1.get("email"), map1.get("passwd"));
 
 			OrdersPage op = p1.gotoorderspage();
-			Assert.assertTrue(op.VerifyOrderDisplay(map1.get("productname")));
+			Assert.assertTrue(op.VerifyOrderDisplay("FAIL PRODUCTNAME"));
+			//Assert.assertTrue(op.VerifyOrderDisplay(map1.get("productname")));
 			
 		}
 		
-		public String getScreenshot(String testCaseName) throws IOException{
-			TakesScreenshot ts = (TakesScreenshot) dr1;	
-			File source = ts.getScreenshotAs(OutputType.FILE);
-			File dest = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
-			FileUtils.copyFile(source, dest);
-			return dest.getAbsolutePath();
-		}
 		
 		@DataProvider
 		public Object[][] getData() throws IOException {

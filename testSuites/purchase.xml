@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="true" name="Suite">
-	<groups>
+<suite parallel="tests" name="Suite">
+	<listeners>
+		<listener class-name="shoppingsite.testcomponents.TestNGListeners"></listener>
+	</listeners>
+	<!--<groups>
 		<run>
-			<include name="purchaseorder"/>
+			<include name="purchaseorder" />
 		</run>
-	</groups>
-	
-  <test thread-count="5" name="SubmitOrderTest">
-    <classes>
-      <class name="shoppingsite.tests.SubmitOrderTest"/>
-    </classes>
-  </test> <!-- Test -->
-  <test thread-count="5" name="errorValidations">
-    <classes>
-      <class name="shoppingsite.tests.errorValidations"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	</groups>-->
+
+	<test thread-count="5" name="SubmitOrderTest">
+		<classes>
+			<class name="shoppingsite.tests.SubmitOrderTest" />
+		</classes>
+	</test> <!--
+	Test --> <!--
+	Test -->
+</suite> <!--
+Suite -->

@@ -1,7 +1,13 @@
 package shoppingsite.tests;
 
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import org.testng.AssertJUnit;
+
+import java.io.File;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -21,7 +27,8 @@ public class errorValidations extends BaseTest{
 		// TODO Auto-generated method stub
 
 		String prodvalidate = "ZARA COAT 3";
-
+		
+		
 
 		// testpractice1@gmail.com, Nuzvid@123
 		lp.loginApplication("testbhamchik@gmail.com", "Nuzvid@123");

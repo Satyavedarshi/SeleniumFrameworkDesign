@@ -8,81 +8,11 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">SubmitOrderTest</a></td><td class="num">1</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">21,726</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">errorValidations</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num attn">2</td><td class="num">41,936</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num attn">1</th><th class="num attn">2</th><th class="num attn">3</th><th class="num">63,662</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">13,408</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SubmitOrderTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">shoppingsite.tests.SubmitOrderTest</td><td><a href="#m0">SubmitOrder</a></td><td rowspan="1">1704017642504</td><td rowspan="1">1099</td></tr><tr><th colspan="4">SubmitOrderTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">shoppingsite.tests.SubmitOrderTest</td><td><a href="#m1">OrderHistoryTest</a></td><td rowspan="1">1704017644267</td><td rowspan="1">0</td></tr><tr><th colspan="4">SubmitOrderTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">shoppingsite.tests.SubmitOrderTest</td><td><a href="#m2">SubmitOrder</a></td><td rowspan="1">1704017627292</td><td rowspan="1">9410</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">errorValidations &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">shoppingsite.tests.errorValidations</td><td><a href="#m3">ProductNameErrorCheck</a></td><td rowspan="1">1704017627248</td><td rowspan="1">16032</td></tr><tr class="failedeven"><td><a href="#m4">loginErrorCheck</a></td><td rowspan="1">1704017662469</td><td rowspan="1">1379</td></tr><tr><th colspan="4">errorValidations &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="2">shoppingsite.tests.errorValidations</td><td><a href="#m5">loginErrorCheck</a></td><td rowspan="2">1704017655231</td><td rowspan="2">1358</td></tr><tr class="retriedeven"><td><a href="#m6">loginErrorCheck</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">cucumber.TestNGTestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1704104830544</td><td rowspan="1">13154</td></tr></tbody>
 </table>
-<h2>SubmitOrderTest</h2><h3 id="m0">shoppingsite.tests.SubmitOrderTest#SubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{productname=ADIDAS ORIGINAL, passwd=Nuzvid@123, email=testpractice1@gmail.com}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;button class=&quot;btn btn-custom&quot;&gt; is not clickable at point (1270,26) because another element &lt;div class=&quot;ngx-spinner-overlay ng-tns-c31-1 ng-trigger ng-trigger-fadeIn ng-star-inserted ng-animating&quot;&gt; obscures it
-Build info: version: &apos;4.15.0&apos;, revision: &apos;1d14b5521b&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;14.1.2&apos;, java.version: &apos;17.0.8&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [5359cf4c-da7b-4a71-9abd-63d788d4a8e0, clickElement {id=653707b8-607d-42b7-bdb5-e374687c0bf4}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 115.6.0, moz:accessibilityChecks: false, moz:buildID: 20231211164624, moz:debuggerAddress: 127.0.0.1:26985, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 23.1.0, moz:processID: 95629, moz:profile: /var/folders/6v/9lrvtpk51g3..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://127.0.0.1:26985/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on mac (5359cf4c-da7b-4a71-9abd-63d788d4a8e0)] -&gt; css selector: [routerlink=&quot;/dashboard/cart&quot;]]
-Session ID: 5359cf4c-da7b-4a71-9abd-63d788d4a8e0
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
-	at shoppingsite.AbstractComponents.AbstractComponents.gotocartpage(AbstractComponents.java:49)
-	at shoppingsite.tests.SubmitOrderTest.SubmitOrder(SubmitOrderTest.java:50)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">shoppingsite.tests.SubmitOrderTest#OrderHistoryTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method shoppingsite.tests.SubmitOrderTest.OrderHistoryTest() on instance shoppingsite.tests.SubmitOrderTest@54422e18 depends on not successfully finished methods 
-[shoppingsite.tests.SubmitOrderTest.SubmitOrder() on instance shoppingsite.tests.SubmitOrderTest@54422e18]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 8 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">shoppingsite.tests.SubmitOrderTest#SubmitOrder</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{productname=ZARA COAT 3, passwd=Nuzvid@123, email=testpractice1@gmail.com}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>errorValidations</h2><h3 id="m3">shoppingsite.tests.errorValidations#ProductNameErrorCheck</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 
-	at shoppingsite.tests.errorValidations.ProductNameErrorCheck(errorValidations.java:55)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">shoppingsite.tests.errorValidations#loginErrorCheck</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected:&lt;Incorrect email or password.&gt; but was:&lt;&gt;
-	at shoppingsite.tests.errorValidations.loginErrorCheck(errorValidations.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">shoppingsite.tests.errorValidations#loginErrorCheck</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected:&lt;Incorrect email or password.&gt; but was:&lt;&gt;
-	at shoppingsite.tests.errorValidations.loginErrorCheck(errorValidations.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">shoppingsite.tests.errorValidations#loginErrorCheck</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected:&lt;Incorrect email or password.&gt; but was:&lt;&gt;
-	at shoppingsite.tests.errorValidations.loginErrorCheck(errorValidations.java:37)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">cucumber.TestNGTestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Positive test of Submitting the Order&quot;</td><td>&quot;Purchase the Order from ECommerce Website&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

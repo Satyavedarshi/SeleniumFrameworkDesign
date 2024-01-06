@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cucumber.TestNGTestRunner">
+      <class name="datadriven.dataproviderexcel">
         <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="dataprovidercalls"/>
         </methods>
-      </class> <!-- cucumber.TestNGTestRunner -->
+      </class> <!-- datadriven.dataproviderexcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
